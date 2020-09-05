@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>java script</title>
+</head>
+<body>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <br><br>
+    <button id="sum" onclick="onClickHandle()">sum</button>
+    <button id="sub" onclick="onClickHandle2()" >Subtract</button>
+    <button id="all" onclick="onClickHandle5()">+-*/</button>
+    <br>
+    <button id="divided" onclick="onClickHandle3()">divided</button>
+    <button id="multiply"onclick="onClickHandle4()">Multiply</button>
+    <h3>Result: <span id="result">0</span></h3>
+     <script>
+        function onClickHandle(){
+            var n1 = parseFloat(document.getElementById('number1').value),
+                n2 = parseFloat(document.getElementById('number2').value);
+
+            printResult(sum(n1, n2));
+        }
+
+        function sum(n1, n2){
+            return n1 + n2;
+        }
+
+        function printResult(result) {
+            document.getElementById('result').innerHTML = '<p style="color: green">' + result + '</p>';
+        }
+        //subtract
+        function onClickHandle2(){
+            var n1 = parseFloat(document.getElementById('number1').value),
+                n2 = parseFloat(document.getElementById('number2').value); 
+                printResult(sub(n1, n2));
+        }
+        function sub(n1, n2){
+            return n1 - n2;
+        }
+        //divided
+        function onClickHandle3(){
+            var n1 = parseFloat(document.getElementById('number1').value),
+                n2 = parseFloat(document.getElementById('number2').value); 
+                printResult(divided(n1, n2));
+        }
+        function divided(n1, n2){
+            return n1 / n2;
+        }
+        //all
+        function onClickHandle5(){
+            var n1 = parseFloat(document.getElementById('number1').value),
+                n2 = parseFloat(document.getElementById('number2').value);
+
+
+        }
+        
+        
+        //multiply
+        function onClickHandle4(){
+            var n1 = parseFloat(document.getElementById('number1').value),
+                n2 = parseFloat(document.getElementById('number2').value); 
+                printResult(multiply(n1, n2));
+        }
+        function multiply(n1, n2){
+            return n1 * n2;
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
