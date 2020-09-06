@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>java script</title>
 </head>
 <body>
     <input type="number" id="number1">
     <input type="number" id="number2">
     <br><br>
-    <button id="sum" onclick="onClickHandle()">sum</button>
+    <button id="sum" onclick="onClickSumHandle()">sum</button>
     <button id="sub" onclick="onClickHandle2()" >Subtract</button>
     <button id="all" onclick="onClickHandle5()">+-*/</button>
     <br>
@@ -18,7 +19,7 @@
     <button id="multiply"onclick="onClickHandle4()">Multiply</button>
     <h3>Result: <span id="result">0</span></h3>
      <script>
-        function onClickHandle(){
+        function onClickSumHandle(){
             var n1 = parseFloat(document.getElementById('number1').value),
                 n2 = parseFloat(document.getElementById('number2').value);
 
@@ -53,10 +54,21 @@
         //all
         function onClickHandle5(){
             var n1 = parseFloat(document.getElementById('number1').value),
-                n2 = parseFloat(document.getElementById('number2').value);
+                n2 = parseFloat(document.getElementById('number2').value); 
+                printResult(all(n1, n2));
 
+
+        
 
         }
+        function all(n1, n2){
+            return ('sum' + sum(n1, n2) + '<br>' 
+            + 'sub' + sub(n1, n2) + '<br>' 
+            + 'divided' + divided(n1, n2) + '<br>' 
+            + 'multiply' + multiply(n1, n2)  );
+        }
+    
+       
         
         
         //multiply
