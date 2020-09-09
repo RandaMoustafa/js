@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vote count</title>
+</head>
+<body>
+    <h3>Vote Up: <input type="number" id="up"></h3>
+    <br>
+    <h3>vote Down: <input type="number" id="down"></h3>
+    <br>
+    <button id="votes" onclick="voteCount()">Check</button>
+    <h3>Result: <span id="result">0</span></h3>
+    <script>
+        function voteCount(){
+            var n1 = document.getElementById('up').value ,
+                n2 = document.getElementById('down').value;
+                printResult(votes(n1 , n2));
+        }
+        function votes(n1 , n2){
+            return n1 - n2 + 'votes' ;
+
+        }
+        function printResult(result){
+            document.getElementById('result').innerHTML='<p style="color:red">' + result + '</p>' ;
+        }
+    </script>
+    
+</body>
+</html>

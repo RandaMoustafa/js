@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Football Points</title>
+</head>
+<body>
+  <h3>wins:
+  <input type="number" id="wins"></h3>
+  <h3>draws:
+  <input type="number" id="draws"></h3>
+  <h3>loses:
+  <input type="number" id="loses"></h3>
+
+  <br>
+  <button id="convert" onclick="convertNumber()">Convert</button>
+  <h3>Result: <span id="result">0</span></h3>
+<script>
+  function convertNumber(){
+   var n1 = parseFloat(document.getElementById('wins').value),
+       n2 = parseFloat(document.getElementById('draws').value),
+       n3 = parseFloat(document.getElementById('loses' .value));
+       wins= n1 * 3 ;
+       draws=n2 * 1 ;
+    printResult(convert(n1 , n2));
+  }
+  function convert(n1 , n2){
+    return (n1 * 3 + n2 * 1 + 'points') ;
+  }
+    function printResult(result) {
+            document.getElementById('result').innerHTML = '<p style="color:brown">' + result + '</p>' ;
+        }
+    </script>
+</body>
+</html>

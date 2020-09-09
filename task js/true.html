@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>true/false</title>
+</head>
+<body>
+    <h3>Number1:<input type="number" id="num1"></h3>
+    <br>
+    <h3>Number2:<input type="number" id="num2"></h3>
+    <br>
+    <button id="tf" onclick="check()">Check</button>
+    <h3>Result: <span id="result">T/F</span></h3>
+    <script>
+        function check(){
+            var n1 = parseFloat(document.getElementById('num1').value) ,
+                n2 = parseFloat(document.getElementById('num2').value); 
+                printResult(tf(n1 , n2));
+
+        }
+        function tf(n1 , n2){
+            if (n1==n2){
+                return n1=n2=Boolean(1);
+            }
+           else {
+               return Boolean(0);
+           }
+        }
+        function printResult(result){
+            document.getElementById('result').innerHTML = '<p style="color:green">' + result + '</p>' ;
+
+        }
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

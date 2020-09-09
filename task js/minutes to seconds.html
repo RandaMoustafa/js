@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>minutes to seconds</title>
+</head>
+<body>
+  <input type="number" id="numbertoconvert">
+  <br>
+  <button id="convert" onclick="convertNumber()">Convert</button>
+  <h3>Result: <span id="result">0</span></h3>
+<script>
+  function convertNumber(){
+   var n = parseFloat(document.getElementById('numbertoconvert').value);
+    printResult(convert(n));
+  }
+  function convert(n){
+    return (n * 60 + 's') ;
+  }
+    function printResult(result) {
+            document.getElementById('result').innerHTML =  '<p style="color:blue">' + result + '</p>';
+        }
+    </script>
+</body>
+</html>
