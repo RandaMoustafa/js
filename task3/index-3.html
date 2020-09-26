@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewrite 'if' into '?'</title>
+</head>
+<body>
+   <input type="number" id="num1">
+   <input type="number" id="num2">
+    <br>
+    <button id="operation" onclick="calculate()">Calculate</button>
+    <br>
+    <h3>Results : <span id="results"></span></h3>
+    <script>
+        function calculate(){
+            var n1 = parseFloat(document.getElementById('num1').value),
+            n2 = parseFloat (document.getElementById('num2').value);
+            printResult(total (n1 , n2))
+        }
+        function total (n1 , n2){
+            if (n1 + n2 < 4) {
+                return "Below";
+            }
+            else {
+                return "over";
+            }
+        }
+        function printResult(results){
+            document.getElementById('results').innerHTML = results;
+        }
+    </script>
+</body>
+</html>
